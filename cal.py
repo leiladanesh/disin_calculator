@@ -150,29 +150,29 @@ class Calculator(QMainWindow):
         if self.op == "cos":
             self.num = self.ui.textbox.text().split(" ")
             self.num1 = float(self.num[1])
-            self.ui.textbox.setText(str(cos(radians(self.num1))))
+            self.ui.textbox.setText(str(math.cos(math.radians(self.num1))))
 
         if self.op == "tan":
             self.num = self.ui.textbox.text().split(" ")
             self.num1 = float(self.num[1])
-            self.ui.textbox.setText(str(tan(radians(self.num1))))
+            self.ui.textbox.setText(str(math.tan(math.radians(self.num1))))
 
         if self.op == "sqrt":
             self.num = self.ui.textbox.text().split(" ")
             self.num1 = float(self.num[1])
-            self.ui.textbox.setText(str(sqrt(self.num1)))
+            self.ui.textbox.setText(str(math.sqrt(self.num1)))
 
         if self.op == "log":
             self.num = self.ui.textbox.text().split(" ")
             self.num1 = float(self.num[1])
-            self.ui.textbox.setText(str(log(self.num1)))
+            self.ui.textbox.setText(str(math.log(self.num1)))
 
         if self.op == "cot":
             self.num = self.ui.textbox.text().split(" ")
             self.num1 = float(self.num[1])
             if self.num1 != 0:
-                sin_1 = sin(radians(self.num1))
-                cos_1= cos(radians(self.num1))
+                sin_1 = math.sin(math.radians(self.num1))
+                cos_1= math.cos(math.radians(self.num1))
                 self.ui.textbox.setText(str(cos_1/sin_1))
             else:
                 self.ui.textbox.setText("Cannot divide by zero")
